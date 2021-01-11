@@ -1,0 +1,38 @@
+//First run this in sql in phpmyadmin
+
+
+CREATE TABLE IF NOT EXISTS `book_det` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `stock` varchar(3) NOT NULL,
+  `price` int(5) NOT NULL,
+  `image` varchar(20) NOT NULL,
+  `author` varchar(20) NOT NULL,
+  `type` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`))
+
+
+
+//Then run this in sql
+
+
+INSERT INTO `book_det` (`id`, `name`, `stock`, `price`, `image`, `author`, `type`) VALUES
+(1, 'MRS FLETCHER', 'YES', 1375, 'books2.jpg', 'TOM PEROTTA', 'FICTION'),
+(7, 'THE ARRANGEMENT', 'NO', 844, 'books7.jpg', 'GEORGE SAUNDERS', 'HUMOUR'),
+(3, 'NEW PEOPLE', 'NO', 1148, 'books3.jpg', 'DANZY SENNA', 'FICTION'),
+(4, 'SOUR HEART', 'YES', 479, 'books4.jpg', 'JENNY ZHANG', 'FICTION'),
+(5, 'WHAT WE LOSE', 'YES', 478, 'books5.jpg', 'ZINZI CLEMMONS', 'FICTION'),
+(6, 'PACHINKO', 'NO', 918, 'books6.jpg', 'MIN JIN LEE', 'FICTION'),
+(8, 'LINCOLN IN THE BARDO', 'YES', 510, 'books8.jpg', 'SARAH DUNN', 'HISTORICAL FICTION'),
+(9, 'CELINE', 'YES', 658, 'books9.jpg', 'PETER HELLER', 'MYSTERY'),
+(10, 'EXIT WEST', 'NO', 450, 'books10.jpg', 'MOHSIN HAMID', 'ROMANCE'),
+(2, 'HALF GIRLFRIEND', 'YES', 129, 'books11.jpg', 'CHETAN BHAGAT', 'ROMANCE'),
+(11, 'ONE INDIAN GIRL', 'NO', 96, 'books12.jpg', 'CHETAN BHAGAT', 'ROMANCE'),
+(12, '5 POINT SOMEONE', 'YES', 110, 'books13.jpg', 'CHETAN BHAGAT', 'FICTION'),
+(13, '3 MISTAKES', 'YES', 127, 'books14.jpg', 'CHETAN BHAGAT', 'FICTION'),
+(14, 'MAKING INDIA AWESOME', 'NO', 160, 'books15.jpg', 'CHETAN BHAGAT', 'NON FICTION'),
+(15, 'REVOLUTION 2020', 'NO', 153, 'books16.jpg', 'CHETAN BHAGAT', 'ROMANCE'),
+(16, '2 STATES', 'YES', 146, 'books17.jpg', 'CHETAN BHAGAT', 'ROMANCE'),
+(17, 'ONE NIGHT AT CALL', 'NO', 169, 'books18.jpg', 'CHETAN BHAGAT', 'FICTION'),
+(18, 'SITA', 'YES', 150, 'books19.jpg', 'AMISH TRIPATHI', 'FANTASY')

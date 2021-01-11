@@ -1,0 +1,25 @@
+//First run this in sql in phpmyadmin
+
+
+CREATE TABLE IF NOT EXISTS `member` (
+  `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `phone_no` bigint(10) NOT NULL,
+  `email_id` varchar(50) NOT NULL,
+  `wallet` bigint(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `phone_no` (`phone_no`,`email_id`))
+
+
+
+//Then run this in sql
+
+
+INSERT INTO `member` (`id`, `name`, `password`, `phone_no`, `email_id`, `wallet`) VALUES
+(1, 'Craig', '12345678', 9920611217, 'craigdsouza97@gmail.com', 139),
+(2, 'Pramila', '12345678', 9820375717, 'pramdsouza@gmail.com', 0),
+(3, 'abc', 'abcd1234', 1234567890, 'abc@sasd.com', 1886),
+(4, 'niki', 'nikita12345', 9765032513, 'dmellonikita0@gmail.com', 0),
+(5, 'ritika ', 'chocolates2', 8451067321, 'ritika.kaushal1997@gmail.com', 0),
+(6, 'Amruta Das', 'charu66', 8268821794, 'amrutadas1998@gmail.com', 125)

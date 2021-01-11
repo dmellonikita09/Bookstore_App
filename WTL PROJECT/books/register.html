@@ -1,0 +1,128 @@
+<html>
+<head>
+<title>Registration Form</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="form12.js"></script>
+<style>
+tr{
+padding:20;
+}
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: orange;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    background-color:orange;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+nav ul li:hover {
+    background-color:#424242;
+	color:white;
+	opacity:04;
+}
+
+article {
+    overflow: hidden;
+}
+
+ul#tab li{
+display: inline-block;
+align-items: right;
+padding: 0% 15px;
+}
+ul#tab li a{
+text-decoration: none;
+color:white;
+}
+.dropdown-menu .sub-menu {
+  left: 100%;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  margin-top: -1px;
+}
+
+.dropdown-menu li:hover .sub-menu {
+  visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+ul#tab li:hover{
+background-color: rgb(89,87,83);
+cursor: pointer;
+}
+ul#tab li{
+cursor: pointer;
+}
+
+{
+  box-sizing: border-box;
+}}
+</style>
+</head>
+<body onLoad="document.registration.name.focus();">
+<header>
+<a href="main.php" target="_top"><img src="BOOKS.JPG" height="50px" width="100px" style="position:absolute; left:350px; top:20px;">
+</a>
+<font size="35">&nbsp;ANC BOOKSTORE</font>
+</header>
+<article>
+<center>
+			<form  name="registration" action="registerr.php" onSubmit="return formValidation();" method="POST" id="form1"> 
+				<h1>Registration Form</h1> 
+				<table style="border-collapse: separate; border-spacing: 20px;position:relative;right:70px;">
+				<tr> 
+				    <td style="text-align:right;"><label for="username" class="uname" data-icon="u" >Name: </label></td>
+					<td><input id="name" name="name" type="text" required="required" placeholder="Name"/></td>
+				</tr>
+				<tr> 
+					<td style="text-align:right;"><label for="emailsignup" class="youmail" data-icon="e" >Email:</label></td>
+					<td><input id="email" name="email" type="email" required="required" placeholder="mymail@mail.com"/> </td>
+				</tr>
+				<tr> 
+					<td style="text-align:right;"><label for="passwordsignup" class="youpasswd" data-icon="p">Password:</label></td>
+					<td><input id="pass" name="pass" required="required" type="password" /></td>
+				</tr>
+				<tr> 
+					<td style="text-align:right;"><label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Confirm your Password:</label></td>
+					<td><input id="cpass" name="cpass"  required="required" type="password" /></td>
+				</tr>
+				<tr>
+				<td style="text-align:right;"><label for="number" class="number" data-icon="n">Phone No:</label></td>
+				<td><input type="text" required="required" name="numb"></td>
+				</tr>
+				</table>
+				<br>
+				<div style="position:relative;">
+				<p> 
+				<button type="submit"  name="submit" value="submit" form="form1" style="text-align:center;background-color:orange;color:white;border-radius:8px;shadow:10px 10px white;">Signup</button>
+				</p>
+				<p class="change_link">
+					Already a member ?
+					<a href="login.php" class="to_register">Sign In</a>
+				</p>
+				</div>
+				</form>
+</center>
+</article>
+</body>
+</html>
